@@ -2,19 +2,15 @@ import { NavLink, Outlet } from 'react-router-dom'
 import {
   LayoutDashboard,
   Radar,
-  GitBranch,
-  BookOpen,
   Shield,
-  ClipboardCheck,
+  Zap,
 } from 'lucide-react'
 import PrototypeBanner from './PrototypeBanner'
 
 const nav = [
-  { to: '/', label: 'Dashboard', icon: LayoutDashboard },
+  { to: '/', label: 'Evaluate — Module 4', icon: Zap },
+  { to: '/dashboard', label: 'UAV Dashboard', icon: LayoutDashboard },
   { to: '/threat-simulation', label: 'Threat Simulation', icon: Radar },
-  { to: '/architecture', label: 'System Workflow', icon: GitBranch },
-  { to: '/research', label: 'My Contribution', icon: BookOpen },
-  { to: '/evaluation', label: 'Evaluation', icon: ClipboardCheck },
 ]
 
 export default function Layout() {
@@ -22,13 +18,17 @@ export default function Layout() {
     <div className="flex min-h-screen bg-[#0a0e17]">
       <aside className="w-64 shrink-0 border-r border-gray-800 bg-[#0d1321] flex flex-col">
         <div className="p-5 border-b border-gray-800">
-          <div className="flex items-center gap-2 text-cyan-400">
-            <Shield className="w-7 h-7" />
-            <span className="font-bold text-sm leading-tight">ACDRE</span>
+          <div className="flex items-start gap-2 text-cyan-400">
+            <Shield className="w-7 h-7 shrink-0" />
+            <div>
+              <span className="font-bold text-sm leading-tight block">
+                Autonomous Cyber Defense &amp; Response Engine
+              </span>
+              <span className="text-[10px] text-gray-600 block mt-0.5">
+                Module 4 · J26-CS-319 · SLIIT
+              </span>
+            </div>
           </div>
-          <p className="text-[10px] text-gray-500 mt-2 leading-snug">
-            Autonomous Cyber Defense & Response Engine
-          </p>
         </div>
         <nav className="flex-1 p-3 space-y-1">
           {nav.map(({ to, label, icon: Icon }) => (
@@ -50,7 +50,8 @@ export default function Layout() {
           ))}
         </nav>
         <div className="p-4 border-t border-gray-800 text-[10px] text-gray-600">
-          Research Prototype v0.1
+          <p>T. H. Ranasinghe</p>
+          <p className="mt-0.5">Research Prototype v0.2 · PP1</p>
         </div>
       </aside>
 

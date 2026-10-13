@@ -1,6 +1,6 @@
-# Autonomous Cyber Defense Prototype — Startup Script
+# Autonomous Cyber Defense Prototype - Startup Script
 Write-Host "Starting UAV Cyber Defense Research Prototype..." -ForegroundColor Cyan
-Write-Host "RESEARCH PROTOTYPE — Simulated Data Only" -ForegroundColor Yellow
+Write-Host "RESEARCH PROTOTYPE - Simulated Data Only" -ForegroundColor Yellow
 
 $root = Split-Path -Parent $MyInvocation.MyCommand.Path
 
@@ -19,4 +19,4 @@ Start-Sleep -Seconds 5
 Write-Host "`nOpening browser..." -ForegroundColor Green
 Start-Process "http://localhost:5173"
 
-Write-Host "`nDemo: Threat Simulation -> Simulate Jamming -> Analyze Threat -> Simulate Response" -ForegroundColor Cyan
+Write-Host "`nDemo: Threat Simulation, Simulate Jamming, Analyze Threat, Simulate Response" -ForegroundColor Cyan
